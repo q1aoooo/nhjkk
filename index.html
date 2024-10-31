@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的個人頁面</title>
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* 問候語的樣式 */
+        #greeting {
+            font-size: 1.5em;
+            color: #333;
+            margin: 20px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>歡迎來到我的 GitHub 個人頁面！</h1>
+    <div id="greeting"></div>
+
+    <script>
+        // 問候語隨機顯示的 jQuery 程式碼
+        $(document).ready(function(){
+            const greetings = ["嗨嗨！", "哈嚕！", "很高興見到你！", "今天過得如何？", "感謝你的到訪！"];
+            const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+            $('#greeting').text(randomGreeting);
+        });
+    </script>
+</body>
+</html>
